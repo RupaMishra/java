@@ -1,0 +1,26 @@
+class Convoy{
+	public static void main(String[] args){
+	
+		int[] arr2 = {3,2,4,5,1};
+		int count = 0;
+		int currMin = arr2[0];
+		StringBuffer buff = new stringBuffer();
+		
+		for(int i=0;i<arr2.length;i++){
+			if(currMin<=arr2[i]){
+				count++;
+				if(i==(arr2.length-1)){
+					buff.append(count+"");
+				}
+			}else{
+				buff.append(count+",");
+				currMin = arr2[i];
+				count = 1;
+				if(i==(arr2.length-1)){
+					buff.append(count+" ");
+				}
+			}
+		}
+		System.out.println(buff.toString());
+	}
+}
